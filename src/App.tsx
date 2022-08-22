@@ -10,7 +10,7 @@ const App = () => {
 
     return (
         <div className="flex flex-col w-full justify-center">
-            <div className="flex w-full md:max-w-4xl mx-auto items-center justify-between py-4 border-b">
+            <div className="flex w-full md:max-w-4xl mx-auto items-center justify-between py-4 border-b-4 border-stone-600">
                 <h1 className="text-4xl">
                     Manifest eegg.foundation
                 </h1>
@@ -18,10 +18,10 @@ const App = () => {
                     {({ open }) => (
                         <>
                             <div className="relative mt-1">
-                                <Listbox.Button className="text-4xl border border-stone-300 pl-3 pr-10 py-2 text-left cursor-default outline-none">
+                                <Listbox.Button className="text-black text-4xl border-black border-4 pl-3 pr-10 py-2 text-left cursor-default outline-none">
                                     <span className="block truncate">{selectedManifest.version}</span>
                                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                                        <SelectorIcon className="w-5 h-5 text-stone-400" aria-hidden="true" />
+                                        <SelectorIcon className="w-5 h-5 text-stone-900" aria-hidden="true" />
                                     </span>
                                 </Listbox.Button>
 
@@ -32,12 +32,12 @@ const App = () => {
                                     leaveFrom="opacity-100"
                                     leaveTo="opacity-0"
                                 >
-                                    <Listbox.Options className="absolute z-10 mt-1 w-full bg-white max-h-60 text-4xl overflow-auto border border-stone-300 outline-none">
+                                    <Listbox.Options className="absolute z-10 mt-1 w-full bg-white max-h-60 text-4xl overflow-auto border-black border-4 outline-none">
                                         {manifests.map((manifest) => (
                                             <Listbox.Option
                                                 key={manifest.version}
                                                 className={({active}) => classNames(
-                                                    active ? 'text-white bg-stone-600' : 'text-gray-900',
+                                                    active ? 'text-white bg-black' : 'text-stone-900',
                                                     'cursor-default select-none relative py-2 pl-3 pr-9',
                                                 )}
                                                 value={manifest}
@@ -50,7 +50,7 @@ const App = () => {
                                                         {selected && (
                                                             <span
                                                                 className={classNames(
-                                                                    active ? 'text-white' : 'text-stone-600',
+                                                                    active ? 'text-white' : 'text-stone-900',
                                                                     'absolute inset-y-0 right-0 flex items-center pr-4',
                                                                 )}
                                                             >
