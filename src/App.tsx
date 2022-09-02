@@ -91,23 +91,29 @@ const App = () => {
                                 )}
                             </Listbox>
                         </div>
-                        <div className="w-full flex flex-col py-4 border-b-4 border-stone-400">
+                        <div className="w-full flex flex-col py-4 border-b-4 border-stone-400 space-y-1">
                             <h2 className="text-stone-400 text-2xl">
                                 EEGG = ROR + NFT
                             </h2>
                             <p>
-                                &copy; 2022 <span className="font-bold">https://manifest.eegg.foundation</span><br/>
-                                <a href="//eegg.foundation" target="_blank">eegg.foundation</a>,
-                                <a href="//peperafaj.cz" target="_blank">peperafaj.cz</a>,<br/>
-                                <a href="https://etherscan.io/address/0xee54e45ec1cda5a4d9e837ff3b4310721140da30" target="_blank">
+                                &copy; 2022 <span className="font-bold">https://manifest.eegg.foundation</span>
+                            </p>
+                            <p>
+                                <a href="//eegg.foundation" target="_blank" className="underline">eegg.foundation</a>
+                                <a href="//peperafaj.cz" target="_blank" className="underline ml-2">peperafaj.cz</a>
+                            </p>
+                            <p>
+                                <a href={`https://etherscan.io/address/${manifest.wallet}`} target="_blank" className="underline">
                                     <span className="hidden md:flex">
-                                        0xee54e45ec1cda5a4d9e837ff3b4310721140da30
+                                        {manifest.wallet}
                                     </span>
                                     <span className="md:hidden">
                                         ETH peněženka
                                     </span>
-                                </a><br/>
-                                Datum vzniku idee: 2022-01-04
+                                </a>
+                            </p>
+                            <p>
+                                Datum vzniku idee: {manifest.inception}
                             </p>
                         </div>
 
